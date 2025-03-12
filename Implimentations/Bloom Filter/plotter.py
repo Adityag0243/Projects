@@ -11,12 +11,19 @@ def plotGraph(no_of_hash, false_positives, sz, multiplier):
     plt.ylabel("False Positive Rate")
    
     plt.title(f"False Positive % vs. No. of Hash Functions")
+    # plt.text(
+    #     0.5, 0.1,  # Adjust position inside the graph
+    #     f"Size of IPs: {sz}\nMultiplier: {multiplier}",
+    #     transform=plt.gca().transAxes,
+    #     fontsize=10, bbox=dict(facecolor='white', alpha=0.5)
+    # )
     plt.text(
-        0.5, 0.1,  # Adjust position inside the graph
+        1.02, 0.5,  # Move outside right side of the graph
         f"Size of IPs: {sz}\nMultiplier: {multiplier}",
         transform=plt.gca().transAxes,
         fontsize=10, bbox=dict(facecolor='white', alpha=0.5)
     )
+
 
     # Find the minimum false positive rate and its corresponding hash function count
     min_fp = min(false_positives)
